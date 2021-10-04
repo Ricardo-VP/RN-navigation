@@ -3,6 +3,7 @@ import {Text, StyleSheet, View, Button} from 'react-native';
 
 const Inicio = ({navigation}) => {
   const informacion = {
+    nombre: 'Juan',
     clienteId: 20,
     totalPagar: 500,
   };
