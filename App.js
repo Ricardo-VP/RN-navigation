@@ -13,19 +13,25 @@ const App = () => {
   return (
     <>
       <NavigationContainer>
-        <Stack.Navigator initialRouteName="Inicio">
-          <Stack.Screen
-            name="Inicio"
-            component={Inicio}
-            options={{
-              title: 'Componente Principal',
-            }}
-          />
+        <Stack.Navigator
+          initialRouteName="Inicio"
+          screenOptions={{
+            title: 'Componente Principal',
+            headerStyle: {
+              backgroundColor: '#f4511e',
+            },
+            headerTintColor: '#fff',
+            headerTitleStyle: {
+              fontWeight: 'bold',
+            },
+            headerTitleAlign: 'center',
+          }}>
+          <Stack.Screen name="Inicio" component={Inicio} />
           <Stack.Screen
             name="Nosotros"
             component={Nosotros}
             options={({route}) => ({
-              title: "Bienvenido " + route.params.nombre, 
+              title: 'Bienvenido ' + route.params.nombre,
             })}
           />
         </Stack.Navigator>
